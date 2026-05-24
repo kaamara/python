@@ -2,11 +2,10 @@ calculation_to_units = 24
 name_of_unit = "hours"
 
 def days_to_unit(num_of_days):
-    print(f"{num_of_days} days are {num_of_days * calculation_to_units} {name_of_unit}")
-    print("All good!")
+    return f"{num_of_days} days are {num_of_days * calculation_to_units} {name_of_unit}"
 
+u_input = input("Hey user, enter a number of days and i will convert it to hours\n")
+user_input_number = int(u_input)
 
-days_to_unit(20)
-days_to_unit(35)
-days_to_unit(50)
-days_to_unit(110)
+calculated_value = days_to_unit(user_input_number)
+print(calculated_value)
