@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/fifik/Desktop/python/technana_python/**)",
+      "Read(//c/Users/fifik/Desktop/python/**)"
+    ]
+  }
+}
