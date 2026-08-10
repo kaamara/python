@@ -10,7 +10,10 @@ def days_to_unit(num_of_days):
         return "you entered a negative value"
 
 u_input = input("Hey user, enter a number of days and i will convert it to hours\n")
-user_input_number = int(u_input)
 
-calculated_value = days_to_unit(user_input_number)
-print(calculated_value)
+if  u_input.isdigit():
+    user_input_number = int(u_input)
+    calculated_value = days_to_unit(user_input_number)
+    print(calculated_value)
+else:
+    print("your input is not a int number.")
