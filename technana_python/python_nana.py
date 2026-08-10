@@ -17,3 +17,4 @@ if  u_input.isdigit():
     print(calculated_value)
 else:
     print("your input is not a int number.")
+# 1;37;06 yt
