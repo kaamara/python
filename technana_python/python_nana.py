@@ -13,8 +13,14 @@ def validateandexecute():
             print(calculated_value)
         elif user_input_number == 0:
             print("you entered a 0, please enter a positive integer!")
+        else:
+            print("you entered a negative, please enter a positive integer!")
     except ValueError:
         print("your input is not a int number.")
 
-u_input = input("Hey user, enter a number of days and i will convert it to hours\n")
-validateandexecute()
+u_input = ""
+while u_input != "exit":
+    u_input = input("Hey user, enter a number of days and i will convert it to hours\n")
+    validateandexecute()
+
+# 2;03;00
