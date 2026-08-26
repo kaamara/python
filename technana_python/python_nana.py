@@ -21,9 +21,15 @@ def validateandexecute():
 u_input = ""
 while u_input != "exit":
     u_input = input("Hey user, enter a number of days and i will convert it to hours (its list so u can add more numbers after ,\n")
-    print(type(u_input.split(", ")))
-    print(u_input.split(", "))
-    for num_of_days_element in u_input.split(", "):
+    list_of_days = u_input.split(", ")
+
+    print(list_of_days)
+    print(set(list_of_days))
+
+    print(type(list_of_days))
+    print(type(set(list_of_days)))
+
+    for num_of_days_element in set(u_input.split(", ")):
         validateandexecute()
 
 # 2;27;27 SETS
