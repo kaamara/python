@@ -1,15 +1,17 @@
-calculation_to_units = 24
-name_of_unit = "hours"
 
-def days_to_unit(num_of_days):
-        return f"{num_of_days} days are {num_of_days * calculation_to_units} {name_of_unit}"
+def days_to_unit(num_of_days, conversion_unit):
+    if conversion_unit == "hours":
+        return f"{num_of_days} days are {num_of_days * 24} hours"
+    elif conversion_unit == "minutes":
+       return f"{num_of_days} days are {num_of_days * 24 * 60} minutes"
+    else:
+        return "unsupported unit"
 
 def validateandexecute():
     try:
-
-        user_input_number = int(num_of_days_element)
+        user_input_number = int(days_and_unit_dictionary["days"])
         if user_input_number > 0:
-            calculated_value = days_to_unit(user_input_number)
+            calculated_value = days_to_unit(user_input_number, days_and_unit_dictionary["unit"])
             print(calculated_value)
         elif user_input_number == 0:
             print("you entered a 0, please enter a positive integer!")
@@ -20,16 +22,23 @@ def validateandexecute():
 
 u_input = ""
 while u_input != "exit":
-    u_input = input("Hey user, enter a number of days and i will convert it to hours (its list so u can add more numbers after ,\n")
-    list_of_days = u_input.split(", ")
+    u_input = input("Hey user, enter a number of days and conversion unit\n")
+    days_and_unit = u_input.split(":")
+    print(days_and_unit)
+    days_and_unit_dictionary = {"days": days_and_unit[0], "unit": days_and_unit[1]}
+    print(days_and_unit_dictionary)
+    print(type(days_and_unit_dictionary))
+    validateandexecute()
 
-    print(list_of_days)
-    print(set(list_of_days))
+    #3;01;43
 
-    print(type(list_of_days))
-    print(type(set(list_of_days)))
 
-    for num_of_days_element in set(u_input.split(", ")):
-        validateandexecute()
-
-# 2;27;27 SETS
+message = "enter some value"
+days = 20
+price = 9.99
+valid_number = True
+exit_input = False
+list_of_days_ = [20, 40, 20, 100]
+list_of_months = ["January", "February", "March", "April"]
+set_of_days = {20, 45, 100}
+days_and_unit = {"days": 10, "unit": "hours"}
