@@ -1,0 +1,13 @@
+# PyCharm / IDE
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Claude Code (local settings)
+.claude/settings.local.json
+
+# Leftovers of the old project (files moved to technana_python/01_basics and 03_datetime)
+technana_python/my-python-project/
