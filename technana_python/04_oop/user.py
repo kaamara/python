@@ -1,14 +1,15 @@
 class User:
-    def __init__ (self, name, password):
+    def __init__(self, email, name, password, current_job_title):
+        self.email = email
         self.name = name
         self.password = password
-    email
-    name
-    password
-    current_job_title
+        self.current_job_title = current_job_title
 
-    def change_password():
-        # d
+    def change_password(self, new_password):
+        self.password = password = new_password
 
-    def change_job_title():
-        # d
+    def change_job_title(self, new_job_title):
+        self.current_job_title = new_job_title
+
+    def get_user_info(self):
+        print(f"User {self.email} has logged in, works as {self.current_job_title}")
